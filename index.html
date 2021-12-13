@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Big Bang Theory</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="TBB.jpg" alt="The Big Bang Theory cover" class="cover">
+        </div>
+        <form action="success.html" class="info formWithValidation">
+            <h2>Опрос по сериалу «Теория большого взрыва»</h2>
+            <div class="questions">
+                <div class="form-group" id="form-group-1">
+                    <div class="answer contact">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" class="userName" placeholder="Например: Антон">
+                    </div>
+                    
+                    <div class="answer contact">
+                        <label for="email">Ваш email:</label>
+                        <input type="text" id="email" class="userEmail" placeholder="Например: odiansenpai@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-2">
+
+                    <p>В каком году вышла пилотная серия?</p>
+            
+                    <div class="answer radioAnswer">
+                        <input type="radio" id="yearChoice1"
+                        name="answer" value="2005"> 
+                        <label for="yearChoice1">2006 год</label>
+                    </div>
+
+                    <div class="answer">
+                        <input type="radio" id="yearChoice2"
+                        name="answer" value="2007">
+                        <label for="yearChoice2">2007 год</label>
+                    </div>
+                
+                </div>
+                <div class="form-group" id="form-group-3">
+                    <div class="answer report">
+                        <label for="text"><p>Перечислить имена любимых супергероев Шелдона.</p> </label>
+                        <textarea id="text" class="reportAnswer" rows="2" cols="15" placeholder="Напирмер: Майор Гром, ..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group" id="form-group-4">
+                    <div class="answer numInput">
+                        <label for="number"><p>Любимое число Шелдона?</p></label>
+                        <input type="text" id="number" class="numAnswer">
+                    </div>
+                </div>
+
+                <div class="form-group" id="form-group-5">
+
+                    <p>Где живут герои «Теории большого взрыва»?</p>
+            
+                    <div class="answerCity radioAnswerCity">
+                        <input type="radio" id="cityChoice1"
+                        name="answerCity" value="NY"> 
+                        <label for="cityChoice1">В Нью-Йорке</label>
+                    </div>
+
+                    <div class="answerCity">
+                        <input type="radio" id="cityChoice2"
+                        name="answerCity" value="Calif">
+                        <label for="cityChoice2">В Калифорнии</label>
+                    </div>
+
+                    <div class="answerCity">
+                        <input type="radio" id="cityChoice3"
+                        name="answerCity" value="TX">
+                        <label for="cityChoice3">В Техасе</label>
+                    </div>
+
+                    <div class="answerCity">
+                        <input type="radio" id="cityChoice4"
+                        name="answerCity" value="KY">
+                        <label for="cityChoice4">В Кентукки</label>
+                    </div>
+                
+                </div>
+                <div class="form-group" id="form-group-6">
+                    <label for="docs"><p>Выберете тех персонажев, у кого была докторская степень</p></label>
+                    
+                    <select name="docs" class="multiValueDoc" id="multDoc" multiple>
+                        <option value="penny">Пенни Хофстедтер</option>
+                        <option value="sheldon">Шелдон Ли Купер</option>
+                        <option value="leonard">Леонард Лики Хофстедтер</option>
+                        <option value="govard">Говард Джоэл Воловиц</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="form-group-7">
+                    <div class="answer numInputFlat">
+                        <label for="numberFlat"><p>Напишите номер квартиры Эми Фара Фаулер</p></label>
+                        <input type="text" id="numberFlat" class="numAnswerFlat">
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-8">
+                    <label for="theory"><p>Кто является автором теории «Супер асимметрия»?</p></label>
+                    
+                    <select name="theory" class="multiValueTheory" id="multTheory" multiple>
+                        <option value="Rajesh">Раджеш</option>
+                        <option value="sheldon">Шелдон</option>
+                        <option value="leonard">Леонард</option>
+                        <option value="Amy">Эмми</option>
+                    </select>
+                </div>
+
+            </div>
+            <input class="btn validateBtn" type="submit" value="Отправить">
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
