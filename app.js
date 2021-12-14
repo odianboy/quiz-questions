@@ -60,15 +60,14 @@ function checkTextInput(className) {
 }
 
 // Проврека ввода имени
-
-function checkStringInput(className, formGroup) {
+function checkStringInput(className, formGroup, checkEmail) {
     if (!className.value) {
         let error = generateError('Поле должно быть заполненно')
         backColor(formGroup, '#ffe5e5')
         className.parentElement.insertBefore(error, className)
     } else if (checkTextInput(className)) {
         backColor(formGroup, '#ffe5e5')
-    } else if (checkEmailInput()) {
+    } else if (checkEmail && checkEmailInput()) {
         backColor(formGroup, '#ffe5e5')
     } else {
         backColor(formGroup, '#c2ebfc')
@@ -146,8 +145,8 @@ form.addEventListener('submit', function (event) {
 
     removeValidation()
 
-    checkStringInput(userName, formGroup1)
-    checkStringInput(reportAnswer, formGroup3)
+    checkStringInput(userName, formGroup1, true)
+    checkStringInput(reportAnswer, formGroup3, false)
     checkNumInput(numAnswer, formGroup4)
     checkNumInput(numAnswerFlat, formGroup7)
     checkRadioBtn(radioAnswer, formGroup2, radioBtnYear)
